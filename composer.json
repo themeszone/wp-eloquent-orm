@@ -1,0 +1,22 @@
+{
+    "name": "xpeedstudio/wp-orm",
+    "description": "ORM using eloquent for wordpress plugin",
+    "type": "wordpress-plugin-helper",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Md. Atiqur Rahman",
+            "email": "atiqur.su@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/database": "^5.4",
+        "illuminate/pagination": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "XS\\ORM\\": "src/"
+        }
+    }
+}
