@@ -13,8 +13,6 @@ class XS_Model extends Model {
 
 	protected $primaryKey = 'ID';
 	protected $post_type = null;
-
-	const CREATED_AT = false;
-	const UPDATED_AT = false;
+	public $timestamps = false;
 
 }
