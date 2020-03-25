@@ -15,6 +15,8 @@ class Database implements ConnectionInterface {
 
 	public $db;
 
+	protected $tablePrefix = '';
+
 	/**
 	 * Count of active transactions
 	 *
@@ -58,6 +60,8 @@ class Database implements ConnectionInterface {
 		];
 
 		$this->db = $wpdb;
+
+		$this->tablePrefix = $this->db->prefix;
 	}
 
 

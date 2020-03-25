@@ -11,7 +11,7 @@ use XS\ORM\Database\Model;
  *
  * @package XS\ORM\Model
  */
-class Post extends XSModel {
+class Post extends XS_Model {
 
 	const CREATED_AT = 'post_date';
 	const UPDATED_AT = 'post_modified';

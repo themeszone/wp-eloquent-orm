@@ -7,10 +7,9 @@
 
 namespace XS\ORM\Model;
 
-
 use XS\ORM\Database\Model;
 
-class XSModel extends Model {
+class XS_Model extends Model {
 
 	protected $primaryKey = 'ID';
 	protected $post_type = null;
