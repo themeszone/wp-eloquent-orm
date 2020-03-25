@@ -42,8 +42,10 @@ abstract class Model extends Eloquent {
 	 * @return string
 	 */
 	public function getTable() {
+
+		#If model defines its name, we will always add the prefix
 		if(isset($this->table)) {
-			return $this->table;
+			return $this->getConnection()->db->prefix . $this->table;
 		}
 
 		$table = str_replace('\\', '', snake_case(str_plural(class_basename($this))));

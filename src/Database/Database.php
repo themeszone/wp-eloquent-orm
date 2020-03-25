@@ -50,6 +50,7 @@ class Database implements ConnectionInterface {
 	 * [__construct description]
 	 */
 	public function __construct() {
+
 		global $wpdb;
 
 		$this->config = [
