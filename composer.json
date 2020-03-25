@@ -9,7 +9,7 @@
             "email": "atiqur.su@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "illuminate/database": "^5.4",
         "illuminate/pagination": "^5.4"

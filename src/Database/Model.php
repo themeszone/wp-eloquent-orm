@@ -16,6 +16,7 @@ abstract class Model extends Eloquent {
 	 * @param array $attributes
 	 */
 	public function __construct(array $attributes = array()) {
+
 		static::$resolver = new Resolver();
 
 		parent::__construct($attributes);
