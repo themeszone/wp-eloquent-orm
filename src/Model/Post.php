@@ -2,8 +2,6 @@
 
 namespace XS\ORM\Model;
 
-use XS\ORM\Database\Model;
-
 
 /**
  * Class Post
@@ -13,9 +11,8 @@ use XS\ORM\Database\Model;
  */
 class Post extends XS_Model {
 
-	const CREATED_AT = 'post_date';
-	const UPDATED_AT = 'post_modified';
-
+	const CREATED_AT    = 'post_date';
+	const UPDATED_AT    = 'post_modified';
 	protected $postType = 'post';
 
 
@@ -57,5 +54,15 @@ class Post extends XS_Model {
 		if($author) {
 			return $query->where('post_author', '=', $author);
 		}
+	}
+
+
+	public function meta() {
+		return $this->hasMany('XS\ORM\Model\PostMeta', 'post_id');
+	}
+
+
+	public function comments() {
+		return $this->hasMany('XS\ORM\Model\Comment', 'comment_post_ID');
 	}
 }
