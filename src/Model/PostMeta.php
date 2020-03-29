@@ -21,16 +21,16 @@ class PostMeta extends XS_Model {
 	protected $table = 'postmeta';
 
 
+	public function getValueAttribute($value) {
 
-	public function getValueAttribute() {
+		$result = @json_decode($this->meta_value);
 
-		return @json_decode($this->meta_value);
-	}
+		if(json_last_error() === JSON_ERROR_NONE) {
 
+			return $result;
+		}
 
-	public function getDecodedValAttribute() {
-
-		return @json_decode($this->meta_value);
+		return $this->meta_value;
 	}
 
 

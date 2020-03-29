@@ -16,6 +16,8 @@ class Page extends XS_Model {
 	const CREATED_AT = 'post_date';
 	const UPDATED_AT = 'post_modified';
 
+	public $table = 'posts';
+
 
 	/**
 	 * Filter by post status

@@ -14,4 +14,8 @@ class User extends XS_Model {
 	public function meta() {
 		return $this->hasMany('XS\ORM\Model\UserMeta', 'user_id');
 	}
+
+	public function posts() {
+		return $this->hasMany('XS\ORM\Model\Post', 'post_author');
+	}
 }
