@@ -11,10 +11,10 @@ use Illuminate\Database\Eloquent\Builder;
  *
  * @package XS\ORM\Model
  */
-class Post extends XS_Model {
+class Page extends XS_Model {
 
-	const CREATED_AT    = 'post_date';
-	const UPDATED_AT    = 'post_modified';
+	const CREATED_AT = 'post_date';
+	const UPDATED_AT = 'post_modified';
 
 
 	/**
@@ -60,7 +60,7 @@ class Post extends XS_Model {
 		parent::boot();
 
 		static::addGlobalScope('post_type', function(Builder $builder) {
-			$builder->where('post_type', '=', 'post');
+			$builder->where('post_type', '=', 'page');
 		});
 	}
 }

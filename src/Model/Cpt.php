@@ -1,18 +1,12 @@
 <?php
-/**
- * Created by  Md. Atiqur Rahman <atiqur.su@gmail.com>
- *
- * Date: 3/29/2020 - 10:03 PM
- */
 
 namespace XS\ORM\Model;
 
 
 class Cpt extends XS_Model {
 
-	const CREATED_AT    = 'post_date';
-	const UPDATED_AT    = 'post_modified';
-	protected $postType = 'post';
+	const CREATED_AT = 'post_date';
+	const UPDATED_AT = 'post_modified';
 
 
 	/**
@@ -35,6 +29,21 @@ class Cpt extends XS_Model {
 	 */
 	public function setTypeAttribute($value) {
 		$this->attributes['post_type'] = trim($value);
+	}
+
+
+	public function scopePost($query) {
+		return $query->where('post_type', '=', 'post');
+	}
+
+
+	public function scopePage($query) {
+		return $query->where('post_type', '=', 'page');
+	}
+
+
+	public function scopeAttachment($query) {
+		return $query->where('post_type', '=', 'attachment');
 	}
 
 
