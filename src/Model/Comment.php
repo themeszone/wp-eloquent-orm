@@ -1,9 +1,7 @@
 <?php
 
-namespace WeDevs\ORM\WP;
+namespace XS\ORM\Model;
 
-
-use XS\ORM\Model\XS_Model;
 
 class Comment extends XS_Model {
 
@@ -11,7 +9,22 @@ class Comment extends XS_Model {
 
 
 	/**
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param $query
+	 *
+	 * @return mixed
+	 */
+	public function scopeApproved($query) {
+		return $query->where('comment_approved', '1');
+	}
+
+
+	/**
 	 * Post relation for a comment
+	 *
+	 * @since 1.0.0
 	 *
 	 * @return \Illuminate\Database\Eloquent\Relations\HasOne
 	 */
