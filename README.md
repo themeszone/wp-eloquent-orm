@@ -1,4 +1,4 @@
-# wp-orm
+# wp-eloquent-orm
 ORM using Eloquent for wordpress 
 
 ##Usage example
@@ -179,5 +179,7 @@ $users = DB::table('users')
 - Eloquent is mainly used here as the query builder
 - WPDB is used to run queries built by Eloquent
 - It doesn't create any extra MySQL connection
-
+ 
+ 
 For more possibility check https://laravel.com/docs/5.5/queries & https://laravel.com/docs/5.5/eloquent 
+ 
