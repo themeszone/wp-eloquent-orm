@@ -1,7 +1,7 @@
 # wp-eloquent-orm
 ORM using Eloquent for wordpress 
 
-##Usage example
+## Usage example
 
 Included models are 
 - Post : Wordpress posts with post_type = post
@@ -119,7 +119,7 @@ Player::where('active', 1)->count();
 Player::where('active', 1)->max('income');
 ```
 
-###Still need to run some raw query?
+### Still need to run some raw query?
 
 ```
 $player = DB::table('players')->where('name', 'John')->first();
@@ -175,7 +175,7 @@ $users = DB::table('users')
                                      
 ```
   
-##How it Works
+## How it Works
 - Eloquent is mainly used here as the query builder
 - WPDB is used to run queries built by Eloquent
 - It doesn't create any extra MySQL connection
