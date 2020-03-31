@@ -12,8 +12,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.0",
-        "illuminate/database": "^7.0",
-        "illuminate/pagination": "^7.0"
+        "illuminate/database",
+        "illuminate/pagination"
     },
     "autoload": {
         "psr-4": {
