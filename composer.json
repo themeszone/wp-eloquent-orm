@@ -1,5 +1,5 @@
 {
-    "name": "xpeedstudio/wp-orm",
+    "name": "themeszone/wp-orm",
     "description": "ORM using eloquent for wordpress plugin",
     "type": "wordpress-plugin-helper",
     "license": "GPL-3.0-or-later",
